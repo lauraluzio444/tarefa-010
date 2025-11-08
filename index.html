@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de Temperaturas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="2" style="text-align:center;">
+        <h1>Conversor de Temperaturas 🌡️</h1>
+        <p>Baseado nas fórmulas da <a href="https://www.weather.gov/media/epz/wxcalc/tempConversion.pdf" target="_blank">NOAA - National Weather Service</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <form id="converterForm">
+          <label for="value">Temperatura:</label>
+          <input type="number" id="value" name="value" required>
+
+          <label for="from">De:</label>
+          <select id="from" name="from">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+          </select>
+
+          <label for="to">Para:</label>
+          <select id="to" name="to">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+          </select>
+
+          <button type="submit">Converter</button>
+        </form>
+        <button onclick="usarPrompt()">Usar Prompt</button>
+      </td>
+      <td>
+        <div id="resultado"></div>
+      </td>
+    </tr>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
